@@ -34,12 +34,23 @@ body {
   color: #111827;
 }
 
+.page-item--divider {
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
 /* Page Items */
 .page-list {
   max-height: 220px;
   overflow-y: auto;
   margin: 10px 0 14px;
-  padding-right: 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page-list::-webkit-scrollbar {
+  display: none;
 }
 
 .page-item {
@@ -47,6 +58,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 8px 2px;
+}
+
+.page-item--divider {
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #CDCDCD;
 }
 
 .page-label {
@@ -58,14 +75,78 @@ body {
   vertical-align: middle;
 
 }
-
-/* Checkbox */
-.page-item input {
-  width: 16px;
-  height: 16px;
-  accent-color: #FFCE22;
-  cursor: pointer;
+/* Wrapper to position the custom checkbox */
+.custom-checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
 }
+
+/* Hide native checkbox */
+.custom-checkbox-wrapper input[type="checkbox"] {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* Custom checkbox background */
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #878787;
+  border-radius: 4px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Checked state */
+.custom-checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #5087F8;
+  border-color: #5087F8;
+}
+
+/* Checkmark */
+.custom-checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Indeterminate state */
+.custom-checkbox-wrapper input[type="checkbox"]:indeterminate + .custom-checkbox {
+  background-color: #5087F8;
+  border-color: #5087F8;
+}
+
+.custom-checkbox-wrapper input[type="checkbox"]:indeterminate + .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
 
 /* Button */
 .primary-btn {

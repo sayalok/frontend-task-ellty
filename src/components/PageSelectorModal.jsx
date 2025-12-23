@@ -32,16 +32,15 @@ export default function PageSelectorModal({ totalPages = 1 }) {
 			aria-labelledby="page-selector-title"
 			aria-modal="true"
 		>
-			<h2 id="page-selector-title">Select pages</h2>
-
-			{/* All Pages (Indeterminate supported) */}
 			<PageItem
 				id="select-all"
 				label="All pages"
 				checked={allSelected}
 				indeterminate={someSelected}
+				divider
 				onChange={toggleAll}
 			/>
+
 
 			<div
 				className="page-list"

@@ -5,6 +5,7 @@ export default function PageItem({
 	label,
 	checked,
 	indeterminate = false,
+	divider = false,
 	onChange,
 }) {
 	const checkboxRef = useRef(null);
@@ -16,20 +17,21 @@ export default function PageItem({
 	}, [indeterminate]);
 
 	return (
-		<div className="page-item">
+		<div className={`page-item ${divider ? "page-item--divider" : ""}`}>
 			<label htmlFor={id} className="page-label">
 				{label}
 			</label>
-			<input
-				ref={checkboxRef}
-				id={id}
-				type="checkbox"
-				checked={checked}
-				onChange={onChange}
-				aria-checked={
-					indeterminate ? "mixed" : checked
-				}
-			/>
+			<div className="custom-checkbox-wrapper">
+				<input
+					ref={checkboxRef}
+					type="checkbox"
+					id={id}
+					checked={checked}
+					onChange={onChange}
+					aria-checked={indeterminate ? "mixed" : checked}
+				/>
+				<span className="custom-checkbox"></span>
+			</div>
 		</div>
 	);
 }
