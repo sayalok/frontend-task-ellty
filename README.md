@@ -1,16 +1,122 @@
-# React + Vite
+# 📄 Frontend Task – Page Selector Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, accessible **Page Selector Modal** built with **React + Vite**, styled using **global CSS**, and deployed using **GitHub Pages**.
 
-Currently, two official plugins are available:
+This project demonstrates clean component architecture, state management, accessibility best practices, and UI polish aligned with a Figma design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔗 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 **Live URL:**  
+https://sayalok.github.io/frontend-task-ellty/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 GitHub Repository
+
+👉 **Source Code:**  
+https://github.com/sayalok/frontend-task-ellty
+
+---
+
+## ✨ Features
+
+- ✅ Reusable **PageSelectorModal** component  
+- ✅ Accepts dynamic page count via props  
+- ✅ Scrollable page list (scrollbar hidden to match design)  
+- ✅ **“All pages” toggle with indeterminate state**  
+- ✅ Accessible (ARIA roles, labels, keyboard-friendly)  
+- ✅ Global CSS (no UI frameworks)  
+- ✅ Responsive (desktop & mobile)  
+- ✅ Montserrat font applied globally  
+- ✅ Deployed on GitHub Pages  
+
+---
+
+## 🧩 Component Structure
+
+```text
+src/
+├── components/
+│   ├── PageSelectorModal.jsx
+│   ├── PageItem.jsx
+│   ├── Header.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## ⚙️ Tech Stack
+
+- **React** (Functional Components & Hooks)  
+- **Vite** (Fast development & build tool)  
+- **JavaScript (ES6+)**  
+- **Global CSS**  
+- **GitHub Pages** (Deployment)  
+
+---
+
+## ♿ Accessibility Highlights
+
+- `role="dialog"` for modal semantics  
+- Proper `aria-labelledby` usage  
+- `aria-checked="mixed"` for indeterminate checkbox state  
+- Label–input association for screen readers  
+- Visible focus outlines for keyboard navigation  
+
+---
+
+## 🚀 Getting Started Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/sayalok/frontend-task-ellty.git
+cd frontend-task-ellty
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the project
+
+```bash
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed using **GitHub Pages**.
+
+To redeploy:
+
+```bash
+npm run deploy
+```
+
+Live URL:
+
+```
+https://sayalok.github.io/frontend-task-ellty/
+```
+
+---
+
+## 👤 Author
+
+**Foysal**
