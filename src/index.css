@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+  color: #222;
+}
+
+/* Layout */
+.app-header,
+.app-footer {
+  background: #ffffff;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-footer {
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Modal */
+.modal {
+  background: #fff;
+  width: 360px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.modal h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* Page list */
+.page-list {
+  max-height: 220px;
+  overflow-y: auto;
+  margin: 12px 0;
+  padding-right: 6px;
+}
+
+.page-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.page-item input {
+  width: 16px;
+  height: 16px;
+}
+
+/* Button */
+.primary-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: #facc15;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #eab308;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .modal {
+    width: 100%;
+  }
+}
