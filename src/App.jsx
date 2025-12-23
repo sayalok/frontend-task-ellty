@@ -4,7 +4,7 @@ export default function App() {
 	return (
 		<>
 			<main className="container">
-				<PageSelectorModal />
+				<PageSelectorModal totalPages={9} />
 			</main>
 
 		</>
